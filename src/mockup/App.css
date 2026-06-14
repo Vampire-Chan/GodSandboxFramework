@@ -1,0 +1,64 @@
+/* ============================================================================
+   APPLICATION CONTAINER STYLES
+   ============================================================================
+   Application-level styling for the main app wrapper.
+   Component-specific styles should be imported with their components
+   or use the unified theme CSS variables and classes from themes.css
+   ============================================================================ */
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.mockup-app-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Screen containers */
+.screen {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* World background for game scenes */
+.world-render {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, #111, #222);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.world-render.dimmed {
+  opacity: 0.4;
+}
+
+/* Fade transition effect */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
